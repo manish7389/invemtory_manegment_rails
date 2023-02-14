@@ -1,0 +1,27 @@
+<h1 class="text-danger">Items</h1>
+<a href="<%= new_inventory_item_path %>" ><button type="button" class="btn btn-success">Create Item</button></a>
+ <table>
+	<tr>
+		<th>Item Id</th>
+		<th>Item Name</th>
+		<th>Item Price</th>
+		<th>Item Rating</th>
+        <th>Item Quantity</th>
+		<th>Update Item</th>
+		<th>Delete Item</th>
+        <th>Button</th>
+	</tr>
+  <% @items.each do |item| %>
+	<tr>
+		<td><%= item.id %></td>
+		<td><%= item.name %></td>
+		<td><%= item.price %></td>
+		<td><%= item.rating %></td>
+    	<td><%= item.quantity %></td>
+		<td><a href="/inventories/<%= item.inventory_id %>/items/<%= item.id %>/edit" ><button type="button" class="btn btn-warning">Update</button></a></td>
+		<td><a href="#" ><button type="button" class="btn btn-danger">Delete</button></a></td>
+    	<td><a href="#" ><button type="button" class="btn btn-success">Buy Now</button> </a></td>
+	
+	</tr>
+  <% end %>
+</table>

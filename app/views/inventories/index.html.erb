@@ -1,0 +1,12 @@
+<%# <p>Welcome <%= current_user.email %></p>
+<h1>Inventory</h1>
+
+<ul>
+  <% @inventories.each do |inventory| %>
+    <li>
+      <a href="/inventories/<%= inventory.id %>/items">
+        <%= inventory.inventory_name %>
+      </a>
+    </li>
+  <% end %>
+</ul>

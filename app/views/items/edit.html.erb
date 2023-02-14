@@ -1,0 +1,27 @@
+<h1>Update Item</h1>
+
+<%= form_with model: @item,url: {action: "update"} do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :price %><br>
+    <%= form.number_field :price %>
+  </div>
+
+  <div>
+    <%= form.label :rating %><br>
+    <%= form.text_field :rating %>
+  </div>
+
+  <div>
+    <%= form.label :quantity %><br>
+    <%= form.text_field :quantity %> 
+  </div>
+
+  <div class = "btn btn-success ">
+    <%= form.submit %>
+  </div>
+<% end %>
